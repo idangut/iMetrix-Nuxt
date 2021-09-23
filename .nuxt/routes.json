@@ -1,8 +1,23 @@
 [
   {
+    "name": "blog",
+    "path": "/blog",
+    "component": "D:\\\\imetrix-nux\\\\app\\\\web\\\\pages\\\\blog.vue",
+    "chunkName": "pages/blog",
+    "_name": "_34e19df6"
+  },
+  {
+    "name": "singlePost",
+    "path": "/singlePost",
+    "component": "D:\\\\imetrix-nux\\\\app\\\\web\\\\pages\\\\singlePost.vue",
+    "chunkName": "pages/singlePost",
+    "_name": "_a3e671aa"
+  },
+  {
     "name": "index",
     "path": "/",
     "component": "D:\\\\imetrix-nux\\\\app\\\\web\\\\pages\\\\index.vue",
-    "chunkName": "pages/index"
+    "chunkName": "pages/index",
+    "_name": "_649c2bff"
   }
 ]

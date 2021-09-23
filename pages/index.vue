@@ -20,6 +20,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#feature">Soluciones</a>
                     </li>
+                     <router-link tag="li" to="/blog" class="nav-item">
+                        <a class="nav-link">Blog</a>
+                    </router-link>
                     <router-link tag="li" to="/login" class="nav-item">
                         <i class="far fa-user-circle"></i>
                         <a class="nav-link">Iniciar sesión</a>

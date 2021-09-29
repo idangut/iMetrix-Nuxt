@@ -5,7 +5,7 @@ export default {
 	beforeCreate() {
 
 		//Redirección al inicio
-		if (this.$route.name == 'index') {
+		if (this.$route.name == 'index' || this.$route.name == 'blog' || this.$route.name == 'singlePost') {
 
 			this.$store.commit('loader', false)
 			return

@@ -13,6 +13,7 @@ async function start () {
   // Init Nuxt.js
   const nuxt = new Nuxt(config)
 
+
   const { host, port } = nuxt.options.server
 
   await nuxt.ready()

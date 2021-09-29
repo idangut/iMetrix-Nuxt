@@ -14,19 +14,12 @@
                 </button>
                 <div class="navbar-collapse collapse" id="navigation">
                     <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">iMetrix</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#feature">Soluciones</a>
-                    </li>
-                     <router-link tag="li" to="/blog" class="nav-item">
-                        <a class="nav-link">Blog</a>
+                  
+               
+                     <router-link tag="li" to="/singlePost" class="nav-item">
+                        <a class="nav-link">Single Post</a>
                     </router-link>
-                    <router-link tag="li" to="/login" class="nav-item">
-                        <i class="far fa-user-circle"></i>
-                        <a class="nav-link">Iniciar sesión</a>
-                    </router-link>
+                  
                     <li class="nav-item social-icons">
                         <i class="fab fa-linkedin-in" @click="openLk()"></i>
                         <i class="fab fa-youtube" @click="openYt()"></i>
@@ -187,13 +180,22 @@
     </div>
 </template>
 <script>
+import auth from '~/mixins/auth'
+
 export default {
     methods:{
         verPost(){
             window.open('https://www.google.com/','_self')
-        
+        },
+         openLk(){
+            window.open('https://www.linkedin.com/company/imetrix-sas/?viewAsMember=true', '_blank')
+        },
+
+        openYt(){
+            window.open('https://www.youtube.com/channel/UCU5NvxslVh531rcSzy2VIZg', '_blank')
         }
-    }
+    },
+     mixins: [auth]
 }
 </script>
 

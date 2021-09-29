@@ -90,7 +90,6 @@ $lg-light-gray: #dedede;
             }
         }
 
-
         .sidebar2{
             flex: 3;
             margin: 20px;
@@ -154,11 +153,75 @@ $lg-light-gray: #dedede;
             margin-left: 20px;
             cursor: pointer;
         }
+
+        ///////////////Side bar para el singlePost
+        .sidebar3{
+            flex: 3;
+            margin: 20px;
+            padding-bottom: 30px;
+            background-color: whitesmoke;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .sidebarItem3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .sidebarTitle3{
+            margin: 10px;
+            padding: 5px;
+            border-top: 2px solid #a7a4a4;
+            border-bottom: 2px solid #a7a4a4;
+            font-size: 14px;
+            color:black;
+            font-weight: 600;
+            line-height: 20px;
+            text-align: center;
+        }
+        
+        .sidebarItem3 > img{
+            margin-top: 15px;
+            height: 200px;
+        }
+        
+        .sidebarItem3 > p{
+            padding: 30px;
+        }
+        
+        .sidebarList3{
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .sidebarListItem3{
+            display: inline-block;
+            width: 50%;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+        
+        .sidebarSocial3{
+            margin-top: 15px;
+            width: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .sidebarIcon3{
+            font-size: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
     }
 
-    
-
     .singlePost{
+        margin-top: 75px;
         flex: 9;
     }
     
@@ -243,6 +306,8 @@ $lg-light-gray: #dedede;
         margin-top: 80px;
         object-fit: cover;
     }
+
+
     font-family: Monserrat, sans-serif;
     font-weight: 400;
     color: $lg-gray !important;

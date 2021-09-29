@@ -1,5 +1,34 @@
 <template>
 <div class="landing">
+           <div class="navbar-shadow">
+            <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent" style="top: 0px;">
+                <div class="navbar-wrapper">
+                    <router-link to="/" class="navbar-brand">
+                    <img class="logo" src="~assets/imgi/iMetrix_logoweb_positivo.png" />
+                    </router-link>
+                </div>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Navegación">
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                    <span class="navbar-toggler-bar navbar-kebab"></span>
+                </button>
+                <div class="navbar-collapse collapse" id="navigation">
+                    <ul class="navbar-nav ml-auto">
+                    <router-link tag="li" to="/login" class="nav-item">
+                        <i class="far fa-user-circle"></i>
+                        <a class="nav-link">Iniciar sesión</a>
+                    </router-link>
+                       <router-link tag="li" to="/blog" class="nav-item">
+                        <a class="nav-link">Blog</a>
+                    </router-link>
+                    <li class="nav-item social-icons">
+                        <i class="fab fa-linkedin-in" @click="openLk()"></i>
+                        <i class="fab fa-youtube" @click="openYt()"></i>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     <div class="home">
         <div class="singlePost">
             <div class="singlePostWrapper">
@@ -32,35 +61,35 @@
                     alias dolor dignissimos, aspernatur tempora totam reprehenderit soluta cumque 
                     commodi nemo tempore.</p>         
             </div>
-            </div>
-         <div class="sidebar2">
-            <div class="sidebarItem2">
-                <span class="sidebarTitle2">ABOUT ME</span>
+        </div>
+         <div style="padding-top: 75px" class="sidebar3">
+            <div class="sidebarItem3">
+                <span class="sidebarTitle3">ABOUT ME</span>
                 <img src="~assets/imgi/3-solucion-voice.jpg" alt="" />
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, ut sapiente voluptatum, deleniti suscipit, est nesciunt iste enim perferendis voluptas error?</p>
             </div>
-            <div class="sidebarItem2">
-                <span class="sidebarTitle2">CATEGORIES</span>
-                <ul class="sidebarList2">
-                    <li class="sidebarListItem2">Life</li>
-                    <li class="sidebarListItem2">Music</li>
-                    <li class="sidebarListItem2">Style</li>
-                    <li class="sidebarListItem2">Sport</li>
-                    <li class="sidebarListItem2">Tech</li>
-                    <li class="sidebarListItem2">Cinema</li>
+            <div class="sidebarItem3">
+                <span class="sidebarTitle3">CATEGORIES</span>
+                <ul class="sidebarList3">
+                    <li class="sidebarListItem3">Life</li>
+                    <li class="sidebarListItem3">Music</li>
+                    <li class="sidebarListItem3">Style</li>
+                    <li class="sidebarListItem3">Sport</li>
+                    <li class="sidebarListItem3">Tech</li>
+                    <li class="sidebarListItem3">Cinema</li>
                 </ul>
             </div>
-            <div class="sidebarItem2">
-                <span class="sidebarTitle2">FOLLOW US</span>
-                <div class="sidebarSocial2">
+            <div class="sidebarItem3">
+                <span class="sidebarTitle3">FOLLOW US</span>
+                <div class="sidebarSocial3">
                     <i class="sidebarIcon2 fab fa-facebook-square"></i>
-                    <i class="sidebarIcon2 fab fa-linkedin"></i>
-                    <i class="sidebarIcon2 fab fa-youtube"></i>
+                    <i class="sidebarIcon2 fab fa-linkedin" @click="openLk()"></i>
+                    <i class="sidebarIcon2 fab fa-youtube" @click="openYt()"></i>
                 </div>
             </div>
         </div>
     </div>
-            <div class="content">
+    <div class="content">
         <footer class="footer">
                     <div class="home-section mx-auto">
                         <div class="px-4 row align-items-end justify-content-between">
@@ -100,3 +129,23 @@
             </div>
 </div>
 </template>
+
+<script>
+import auth from '~/mixins/auth'
+
+export default {
+    methods:{
+        verPost(){
+            window.open('https://www.google.com/','_self')
+        },
+         openLk(){
+            window.open('https://www.linkedin.com/company/imetrix-sas/?viewAsMember=true', '_blank')
+        },
+
+        openYt(){
+            window.open('https://www.youtube.com/channel/UCU5NvxslVh531rcSzy2VIZg', '_blank')
+        }
+    },
+     mixins: [auth]
+}
+</script>

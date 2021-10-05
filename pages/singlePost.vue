@@ -82,9 +82,8 @@
             <div class="sidebarItem3">
                 <span class="sidebarTitle3">FOLLOW US</span>
                 <div class="sidebarSocial3">
-                    <i class="sidebarIcon2 fab fa-facebook-square"></i>
-                    <i class="sidebarIcon2 fab fa-linkedin" @click="openLk()"></i>
-                    <i class="sidebarIcon2 fab fa-youtube" @click="openYt()"></i>
+                    <i class="sidebarIcon3 fab fa-linkedin" @click="openLk()"></i>
+                    <i class="sidebarIcon3Youtube fab fa-youtube" @click="openYt()"></i>
                 </div>
             </div>
         </div>
@@ -129,7 +128,6 @@
             </div>
 </div>
 </template>
-
 <script>
 import auth from '~/mixins/auth'
 
@@ -149,3 +147,4 @@ export default {
      mixins: [auth]
 }
 </script>
+

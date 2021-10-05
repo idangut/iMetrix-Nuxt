@@ -31,7 +31,7 @@ module.exports = {
     },
     script: [
       {
-        src: 'https://tableu2.imetrix.com.co/javascripts/api/tableau-2.min.js'
+        //src: 'https://tableu2.imetrix.com.co/javascripts/api/tableau-2.min.js'
       }
     ]
   },

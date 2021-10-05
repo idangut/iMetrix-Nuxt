@@ -17,7 +17,7 @@
                   
                
                      <router-link tag="li" to="/singlePost" class="nav-item">
-                        <a class="nav-link">Single Post</a>
+                        <a class="nav-link">Single</a>
                     </router-link>
                   
                     <li class="nav-item social-icons">
@@ -132,9 +132,8 @@
             <div class="sidebarItem2">
                 <span class="sidebarTitle2">FOLLOW US</span>
                 <div class="sidebarSocial2">
-                    <i class="sidebarIcon2 fab fa-facebook-square"></i>
-                    <i class="sidebarIcon2 fab fa-linkedin"></i>
-                    <i class="sidebarIcon2 fab fa-youtube"></i>
+                    <i class="sidebarIcon2 fab fa-linkedin" @click="openLk()"></i>
+                    <i class="sidebarIcon2Youtube fab fa-youtube" @click="openYt()"></i>
                 </div>
             </div>
         </div>
@@ -179,6 +178,7 @@
             </div>
     </div>
 </template>
+
 <script>
 import auth from '~/mixins/auth'
 

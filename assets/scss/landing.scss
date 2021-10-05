@@ -1,3 +1,5 @@
+@import "../scss/global.scss";
+
 @font-face {
     font-family: "Montserrat";
     font-weight: 400;
@@ -29,6 +31,7 @@ $lg-light-gray: #dedede;
 .landing{   
     .home{
         display: flex;
+        flex-wrap: wrap;
 
         .posts{
             flex: 9;
@@ -36,9 +39,22 @@ $lg-light-gray: #dedede;
             flex-wrap: wrap;
             margin: 30px;
 
+            @include mobile{
+                flex: 0;
+                display: flex;
+                flex-wrap: wrap;
+                
+            }
+
             .post{
                 width: 450px;
                 margin: 0px 25px 40px 25px;
+
+                @include mobile{
+                    width: 300px;
+                    height: 550px;
+                    margin: 0;
+                }
             }
             
             .postImg{
@@ -150,8 +166,16 @@ $lg-light-gray: #dedede;
         
         .sidebarIcon2{
             font-size: 20px;
+            margin-left: 5px;
+            cursor: pointer;
+            color: rgb(69, 69, 224);
+        }
+
+        .sidebarIcon2Youtube{
+            font-size: 20px;
             margin-left: 20px;
             cursor: pointer;
+            color: rgb(255, 0, 0);
         }
 
         ///////////////Side bar para el singlePost
@@ -215,8 +239,16 @@ $lg-light-gray: #dedede;
         
         .sidebarIcon3{
             font-size: 20px;
+            margin-left: 5px;
+            cursor: pointer;
+            color: rgb(69, 69, 224);
+        }
+
+        .sidebarIcon3Youtube{
+            font-size: 20px;
             margin-left: 20px;
             cursor: pointer;
+            color: rgb(255, 0, 0);
         }
     }
 
@@ -228,6 +260,9 @@ $lg-light-gray: #dedede;
     .singlePostWrapper{
         padding: 20px;
         padding-right: 0;
+        @include mobile{
+            padding: 10px;
+        }
     }
     
     .singlePostImg{
@@ -235,6 +270,13 @@ $lg-light-gray: #dedede;
         height: 380px;
         border-radius: 10px;
         object-fit: cover;
+
+        @include mobile{
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
     }
     
     .singlePostTitle{
@@ -242,15 +284,26 @@ $lg-light-gray: #dedede;
         margin: 20px;
         font-size: 28px;
         font-weight: bold;
+
+        @include mobile{
+            text-align: center;
+            margin: 20px;
+            font-size: 30px;
+            font-weight: bold;
+        }
     }
     
     .singlePostEdit{
         float: right;
         font-size: 29px;
+
+        @include mobile{
+            font-size: 30px;
+        }
     }
     
     .singlePostIcon{
-        margin-right: 10px;
+        margin-left: 10px;
         cursor: pointer;
     }
     
@@ -267,12 +320,24 @@ $lg-light-gray: #dedede;
         justify-content: space-between;
         font-size: 15px;
         color: rgb(221, 176, 51);
+
+        @include mobile{
+            margin: 10px;
+            font-size: 20px;
+        }
     }
     
     .singlePostDesc{
         color: black;
         font-size: 19px;
         line-height: 25px;
+
+        @include mobile{
+            font-size: 16px;
+            line-height: 20px;
+            margin: 10px;
+            
+        }
     }
     
     .singlePostDesc::first-letter{
@@ -302,9 +367,15 @@ $lg-light-gray: #dedede;
     
     .headerImg{
         width: 100%;
-        height: 680px;
-        margin-top: 80px;
+        height: 690px;
+        margin-top: 70px;
         object-fit: cover;
+
+        @include mobile{
+            width: 100%;
+            height: 570px;
+            object-fit: cover;
+        }
     }
 
 
